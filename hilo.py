@@ -23,9 +23,10 @@ class Cards:
         self.first_card = 0
         self.second_card = 0
     
-    def get_card(self):
+    def flip_first_card(self):
         self.first_card = random.randint(1, 13)
 
+    def flip_second_card(self):
         equal_value = False
         while equal_value != True:
             self.second_card = random.randint(1, 13)
