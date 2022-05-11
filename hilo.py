@@ -1,3 +1,5 @@
+import random
+
 class Director:
     #
     def __init__(self):
@@ -18,10 +20,19 @@ class Director:
 class Cards:
 
     def __init__(self):
-        ''
+        self.first_card = 0
+        self.second_card = 0
     
     def get_card(self):
-        ''
+        self.first_card = random.randint(1, 13)
+
+        equal_value = False
+        while equal_value != True:
+            self.second_card = random.randint(1, 13)
+            if self.second_card == self.first_card:
+                self.second_card = random.randint(1,13)
+            else:
+                equal_value == True
 
 
 ''' DESIGN
